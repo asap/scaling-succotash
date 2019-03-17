@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const renderIcon = (completed) => {
+  const iconCSS = completed ? 'fa-check-square' : 'fa-square';
+  return <span class="fa-li"><i class={"far " + iconCSS}></i></span>
+}
+
 const Todo = ({ onClick, completed, text }) => (
   <li
     onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
+    className={completed ? 'completed' : ''}
   >
-    {text}
+    {renderIcon(completed)}{text}
   </li>
 )
 

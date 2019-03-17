@@ -6,8 +6,22 @@ const todos = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
-          completed: false
+          completed: false,
+          isNew: true,
         }
+      ]
+    case 'SAVE_TODOS':
+      return [
+        ...state,
+      ]
+    case 'LOAD_TODOS':
+      return [
+        ...state,
+        ...action.todos,
+      ]
+    case 'INIT_TODO':
+      return [
+        ...state,
       ]
     case 'TOGGLE_TODO':
       return state.map(todo =>
