@@ -1,0 +1,61 @@
+@import '_variables';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.add-todo {
+  background-color: $purple;
+  padding: 30px;
+  form {
+    width: 60%;
+    margin: 0 auto;
+    background: $white;
+    display: flex;
+    input,
+    button {
+      height: 40px;
+      background: none;
+      box-shadow: none;
+      border: 0;
+      border-radius: 0;
+    }
+    input {
+      width: 100%;
+      padding: 0 10px;
+      font-size: 0.9rem;
+    }
+    button {
+      text-transform: uppercase;
+      padding: 0 10px;
+    }
+  }
+}
+
+.todo-list {
+  li {
+    width: 60%;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-bottom: 1px solid $gray;
+    font-size: 0.8rem;
+  }
+}
+
+.footer {
+    width: 30%;
+    text-align: center;
+}

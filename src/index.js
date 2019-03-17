@@ -5,6 +5,8 @@ import { Provider } from 'react-redux'
 import App from './components/App'
 import rootReducer from './reducers'
 
+import './styles/index.scss'
+
 // For debugging REDUX
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
