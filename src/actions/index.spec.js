@@ -2,11 +2,15 @@ import * as actions from './index'
 
 describe('todo actions', () => {
   it('addTodo should create ADD_TODO action', () => {
-    expect(actions.addTodo('Use Redux')).toEqual({
+    const expectedAction = actions.addTodo('Use Redux');
+    expect(expectedAction).toMatchObject({
       type: 'ADD_TODO',
-      id: 0,
-      text: 'Use Redux'
+      text: 'Use Redux',
+      isNew: true,
     })
+
+    expect(expectedAction.id).toBeTruthy();
+    expect(typeof expectedAction.id).toBe('string');
   })
 
   it('setVisibilityFilter should create SET_VISIBILITY_FILTER action', () => {
